@@ -158,8 +158,10 @@
 
     function downloadGeneratedResume() {
         
-      document.getElementById('downloadButton').style.display = 'none';
+      const downloadButton = document.querySelector('#generatedResume button');
       const element = document.getElementById('generatedResume');
+        downloadButton.style.display = 'none';
+
       html2pdf()
         .from(element)
         .set({

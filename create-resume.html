@@ -157,6 +157,8 @@
     });
 
     function downloadGeneratedResume() {
+        
+      document.getElementById('downloadButton').style.display = 'none';
       const element = document.getElementById('generatedResume');
       html2pdf()
         .from(element)
